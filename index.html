@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMPUBL℠ Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">SMPUBL℠</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Licensing</a></li>
+        <li><a href="#">Rights Protection</a></li>
+        <li><a href="#">Sign Up</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Protect Your Rights. Collect Your Royalties.</h1>
+    <p>Turn your songs into sacred assets.</p>
+    <a href="#" class="cta-button">Begin Registration</a>
+  </section>
+
+  <main>
+    <section class="info">
+      <h2>Licensing Overview</h2>
+      <p>We administer your music with the precision of law and the power of legacy.</p>
+    </section>
+
+    <section class="form-section">
+      <h2>Genre Registration</h2>
+      <form>
+        <input type="text" placeholder="Artist Name" required />
+        <input type="email" placeholder="Email" required />
+        <select required>
+          <option value="">Select Genre</option>
+          <option>Pop</option>
+          <option>Hip-Hop</option>
+          <option>Jazz</option>
+          <option>Classical</option>
+          <option>Electronic</option>
+        </select>
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <section class="confirmation">
+      <h2>Confirmation & Protection</h2>
+      <p>Receive confirmation and legal coverage instantly <p>Click below to pay for your selected service:</p>
+  <p><a href="https://paypal.com/pay?amount=99" class="btn-primary">Pay $99 for Single Distribution</a></p>
+  <p><a href="https://paypal.com/pay?amount=150" class="btn-primary">Pay $150 for Album Distribution</a></p>
+  <p><a href="https://paypal.com/pay?amount=50" class="btn-primary">Pay Flat Fee for Publishing Admin</a></p>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Form submitted. Please complete payment using the links above.");
+    });
+  </script>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SMPUBL℠ | Privacy | Terms | Trademark Notice</p>
+  </footer>
+</body>
+</html>
