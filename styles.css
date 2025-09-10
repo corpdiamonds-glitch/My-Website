@@ -1,0 +1,200 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Typography Updates */
+body {
+  font-family: "Lato", Arial, sans-serif;
+}
+
+h1, h2 {
+  font-family: "Merriweather", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+/* ==========================================================================
+   SMPUBL — Site Styles (Artist-Friendly Neon Theme)
+   Title: SMPUBL | Turn Your Songs Into Income
+   Tagline: Protect your rights. Collect your royalties.
+   ========================================================================== */
+
+/* -------- Root + Resets -------- */
+:root{
+  --bg:#0b0c10;
+  --panel:#111319;
+  --ink:#eaf2ff;
+  --muted:#9fb3c8;
+  --primary:#37d0ff;   /* neon cyan */
+  --accent:#c24bff;    /* neon purple */
+  --accent-2:#00ffa8;  /* neon mint */
+  --stroke:#1e2333;
+  --radius:14px;
+  --shadow-lg:0 12px 30px rgba(0,0,0,.4);
+  --glow-primary:0 0 12px var(--primary), 0 0 28px rgba(55,208,255,.55);
+  --glow-accent:0 0 12px var(--accent), 0 0 28px rgba(194,75,255,.55);
+  --focus: 0 0 0 3px rgba(55,208,255,.35);
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: "Lato", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: radial-gradient(1200px 800px at 10% 0%, rgba(194,75,255,.08), transparent 55%),
+              radial-gradient(1200px 800px at 90% 10%, rgba(55,208,255,.08), transparent 55%),
+              var(--bg);
+  color: var(--ink);
+  text-align: center;
+  padding: 2rem;
+  line-height:1.6;
+}
+
+/* -------- Typography -------- */
+h1,h2{
+  font-family: "Oswald", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 0.25rem 0 0.5rem;
+  letter-spacing:.5px;
+  color: var(--ink);
+}
+h1{
+  font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
+  text-shadow: 0 2px 0 rgba(0,0,0,.35), var(--glow-primary);
+}
+h2{
+  font-size: clamp(1.25rem, 2.5vw + .5rem, 2rem);
+  color: var(--muted);
+}
+
+/* -------- Header -------- */
+header{
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  padding: 2rem 1.25rem;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) padding-box,
+    radial-gradient(1200px 400px at 50% -20%, rgba(194,75,255,.2), transparent 60%),
+    radial-gradient(1000px 400px at 50% 120%, rgba(55,208,255,.18), transparent 60%),
+    var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+header p{
+  margin: .25rem 0 1.25rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+/* -------- Buttons -------- */
+/* Unify all button-like classes used in the HTML */
+.btn-primary,
+.btn-secondary,
+.cta-button,
+.button,
+button[type="submit"],
+header .cta a{
+  display: inline-block;
+  padding: .85rem 1.35rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing:.25px;
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease, background .2s ease;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Primary */
+.btn-primary,
+.cta-button,
+button[type="submit"]{
+  background: linear-gradient(180deg, var(--primary), #0fb8ff);
+  color: #081018;
+  box-shadow: var(--glow-primary);
+}
+.btn-primary:hover,
+.cta-button:hover,
+button[type="submit"]:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+/* Secondary */
+.btn-secondary{
+  background: linear-gradient(180deg, var(--accent), #8b2cff);
+  color: #0f0818;
+  box-shadow: var(--glow-accent);
+}
+.btn-secondary:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+
+/* Spacing for CTA row in header */
+header .cta{ display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; margin-top:1rem; }
+
+/* -------- Forms -------- */
+form{ margin: 1.25rem auto 0; max-width: 560px; }
+
+input[type="text"],
+input[type="email"],
+select{
+  width: 100%;
+  max-width: 560px;
+  padding: .9rem 1rem;
+  margin: .5rem auto;
+  background: #0e111a;
+  color: var(--ink);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
+  transition: box-shadow .15s ease, border-color .15s ease;
+  display:block;
+}
+
+input::placeholder{ color: #7f8aa8; }
+
+input:focus,
+select:focus{
+  border-color: var(--primary);
+  box-shadow: var(--focus), var(--glow-primary);
+}
+
+/* Submit button within forms uses primary style; add top margin */
+form .cta-button,
+form button[type="submit"]{ margin-top: .75rem; }
+
+/* Section container */
+section{
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem 1.25rem;
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) padding-box,
+              var(--panel);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  text-align: left;
+}
+section > h2{ text-align:center; }
+
+/* Links */
+a{ color: var(--primary); }
+a:hover{ text-decoration: underline; }
+
+/* Footer */
+.footer{
+  margin: 3rem auto 0;
+  color: var(--muted);
+  font-size:.92rem;
+}
+
+/* -------- Utilities -------- */
+.neon-outline{
+  text-shadow: var(--glow-accent);
+}
+.hide{ display:none !important; }
+
+/* -------- Responsive Tweaks -------- */
+@media (max-width: 640px){
+  body{ padding: 1.25rem; }
+  header{ padding: 1.5rem 1rem; }
+  header .cta{ gap:.5rem; }
+}
